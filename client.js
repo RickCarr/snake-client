@@ -10,10 +10,11 @@ const connect = function () {
   conn.setEncoding("utf8");
   
   conn.on('connect', () => {
-    console.log('established connection');
+    conn.write('Name: rrc')
+    console.log('Established Connection');
   })
   conn.on('data', (incomingData) => {
-    console.log('incoming data :', incomingData);
+    console.log('Incoming Data :', incomingData);
   })
   return conn;
 };
