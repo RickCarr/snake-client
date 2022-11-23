@@ -10,7 +10,12 @@ const connect = function () {
   conn.setEncoding("utf8");
   
   conn.on('connect', () => {
-    conn.write('Name: rrc')
+    conn.write('Name: rrc');
+    
+    // setInterval(() => {
+    //   conn.write('Move: up'); 
+    // }, 50);
+    
     console.log('Established Connection');
   })
   conn.on('data', (incomingData) => {
