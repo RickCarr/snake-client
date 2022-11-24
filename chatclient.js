@@ -20,6 +20,6 @@ process.stdin.on('data', (message) => {
   client.write(message);
 });
 
-client.on('data', function(message){
+client.on('data', function(message) {
   console.log('server sent:', message);
 });
