@@ -11,11 +11,7 @@ const connect = function() {
   
   conn.on('connect', () => {
     conn.write('Name: rrc');
-    
-    // setInterval(() => {
-    //   conn.write('Move: up');
-    // }, 50);
-    
+  
     console.log('Established Connection');
   });
   conn.on('data', (incomingData) => {
@@ -23,6 +19,6 @@ const connect = function() {
   });
   return conn;
 };
+const connection = connect();
 
-
-module.exports = { connect };
+module.exports = { connection };
